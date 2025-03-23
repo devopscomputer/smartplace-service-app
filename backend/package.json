@@ -1,0 +1,28 @@
+{
+  "name": "smartplace-backend",
+  "version": "1.0.0",
+  "description": "Cloud Functions para o app SmartPlace - marketplace de serviços",
+  "main": "index.js",
+  "scripts": {
+    "start": "firebase emulators:start --only functions",
+    "deploy": "firebase deploy --only functions",
+    "serve": "firebase functions:shell"
+  },
+  "keywords": [
+    "firebase",
+    "cloud-functions",
+    "marketplace",
+    "smartplace",
+    "backend"
+  ],
+  "author": "@devopscomputer",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "firebase-admin": "^13.2.0",
+    "firebase-functions": "^6.3.2",
+    "twilio": "^5.5.1",
+    "express": "^4.18.2"
+  }
+}

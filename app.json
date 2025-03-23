@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "fresh-clean-app",
+    "slug": "fresh-clean-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "port": 19006  
+    },
+    "platforms": ["ios", "android", "web"],
+    "devToolsPort": 19006  
+  }
+}

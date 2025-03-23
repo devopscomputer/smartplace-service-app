@@ -1,0 +1,40 @@
+{
+  "name": "fresh-clean-app",
+  "version": "1.0.0",
+  "main": "expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@expo/metro-runtime": "~4.0.0",
+    "@react-native-community/datetimepicker": "^8.2.0",
+    "@react-navigation/native": "^6.1.18",
+    "@react-navigation/stack": "^6.4.1",
+    "expo": "^52.0.21",
+    "expo-av": "~15.0.1",
+    "expo-blur": "~14.0.1",
+    "expo-linear-gradient": "~14.0.2",
+    "expo-status-bar": "~2.0.0",
+    "lottie-ios": "^3.1.8",
+    "lottie-react-native": "^7.0.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-native": "0.76.5",
+    "react-native-calendars": "^1.1307.0",
+    "react-native-gesture-handler": "~2.20.2",
+    "react-native-maps": "^1.20.1",
+    "react-native-safe-area-context": "^5.0.0",
+    "react-native-svg": "15.8.0",
+    "react-native-web": "~0.19.13",
+    "react-native-webview": "^13.13.4",
+    "styled-components": "^6.1.16",
+    "three": "^0.171.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  },
+  "private": true
+}
