@@ -38,41 +38,78 @@ SmartPlace é um app moderno e inteligente para conectar clientes a prestadores 
 ![Mercado Pago](https://img.shields.io/badge/Mercado_Pago-009EE3?style=for-the-badge&logo=mercado-pago&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-E34F26?style=for-the-badge&logo=linux&logoColor=white)
 
-
 ## 🎯 Foco Estratégico
 
-- 📲 Mobile-first com ótima UX
-- 🤖 IA leve para recomendações
-- 💸 Monetização escalável
-- 🌎 Pronto para LATAM
-- 🧩 Arquitetura modular desacoplada
+- 📲 **Mobile-first** com experiência fluida, intuitiva e responsiva
+- 🤖 **IA leve** para sugestões personalizadas com base em comportamento, região e recontratação
+- 🧠 **Prova social inteligente**: sistema de avaliação com tags, estrelas, comentários e reputação calculada
+- 💸 **Monetização escalável**: comissão por serviço, assinaturas mensais Pro e impulsionamento no feed
+- 📦 **Modularidade técnica**: separação clara entre cliente, prestador e administração
+- 🔄 **Recontratação inteligente**: sistema com base em histórico e notificações
+- 🛎️ **Notificações em tempo real**: Push via FCM, fallback por SMS (Twilio), status do agendamento (pendente, confirmado, concluído)
+- 🌎 **Pronto para LATAM**: suporte multilíngue, moedas locais, cobertura regional
+- 🧩 **Arquitetura desacoplada**: componentes reutilizáveis e estrutura Atomic Design
+- 🧪 **Testes automatizados**: preparados para Jest (unidade), Detox (E2E), Firebase Emulator (mock local)
+- 📈 **Design System consistente**: inspirado em Urban Company, Airbnb, Thumbtack
+- 🗂️ **Gamificação**: sistema de pontos, selos, níveis de usuário e cashback futuro
+- 🧠 **IA integrada com Firebase AI e OpenAI** (em planejamento) para recomendações e análise de reputação
+- 📊 **Dashboard de performance** para prestadores com insights e gráficos
+
+---
 
 ## 🔧 Tecnologias Utilizadas
 
-### Frontend (React Native com Expo)
-- React Navigation
-- Styled Components
-- Framer Motion
-- Maps, BlurView, SVG
-- Firebase Auth, Firestore, Push
+### 🖥️ Frontend (React Native + Expo)
 
-### Backend (Firebase Functions)
-- Firebase Authentication (SMS)
-- Cloud Firestore (NoSQL)
-- Cloud Functions v2
-- Firebase Emulator Suite
-- Integração futura com MercadoPago, Twilio
+- ✅ React Navigation (stack, tab e modal)
+- ✅ Styled Components (temas, componentes reutilizáveis)
+- ✅ Framer Motion (animações declarativas)
+- ✅ React Native Maps + Google Maps API (cobertura e geolocalização)
+- ✅ BlurView e SVG (efeitos visuais avançados)
+- ✅ React Native Gesture Handler + Reanimated
+- ✅ DateTimePicker (seleção intuitiva de datas)
+- ✅ Recharts / Victory Native (para gráficos no dashboard futuro)
+- ✅ Expo Push Notifications (via FCM)
+- ✅ Deep Linking (planejado)
+- ✅ Acessibilidade e responsividade nativa
 
-### DevOps
-- EAS CLI (build Android/iOS)
-- Firebase Hosting (dashboard futuro)
-- GitHub Actions (CI/CD futuro)
+### ☁️ Backend (Firebase Cloud)
+
+- ✅ Firebase Authentication (SMS com Recaptcha e verificação de duplicidade)
+- ✅ Cloud Firestore (banco NoSQL com segurança granular)
+- ✅ Firebase Cloud Functions v2 (Node.js 18+)
+- ✅ Firebase Emulator Suite (testes locais integrados)
+- ✅ Firebase Rules avançadas (por role: cliente/prestador/admin)
+- ✅ Cloud Messaging (Push FCM)
+- ✅ Twilio (envio de SMS como fallback)
+- 🛒 Integração com MercadoPago (em progresso para checkout e boleto)
+- 🧠 Firebase AI / OpenAI (planejado para inteligência preditiva)
+- 🛡️ Regras automatizadas de reputação e penalidade
+- 🔁 Webhooks (planejados para CRM externo ou Google Sheets)
+
+### ⚙️ DevOps, CI/CD e Arquitetura
+
+- ✅ **EAS CLI** (build Android/iOS, profiles de produção e preview)
+- ✅ **Firebase Hosting** (dashboard admin planejado)
+- ✅ **GitHub Actions** (CI/CD planejado para lint, test, build e deploy)
+- ✅ **Atomic Design Pattern** (organização dos componentes por função)
+- ✅ **Pasta shared-components** com elementos globais (Rating, Chips, Badges, etc)
+- ✅ **Monitoramento com Sentry/LogRocket** (em análise para erros em tempo real)
+- ✅ **.env e .gitignore configurados** para segurança de chaves e deploy
+- ✅ **Estrutura desacoplada** com rotas, triggers e utils bem segmentadas no backend
+
+---
 
 ## 🔐 Autenticação Firebase
 
-- Login por telefone
-- Código via SMS + Recaptcha
-- UID armazenado no Firestore com nome, cidade, etc.
+- 🔑 Login via número de celular com verificação dupla (SMS + Recaptcha)
+- 🔒 UID único por sessão e revalidação de token
+- 📄 Criação de documento automático no Firestore com:
+  - Nome completo, cidade, tipo de usuário (cliente/prestador)
+  - FCM Token para push notifications
+  - TagStats para IA de reputação (pontual, educado, etc)
+  - Gamification: pontos acumulados, selos e badges
+  - Histórico de serviços, avaliações, favoritos e recontratação
 
 ```json
 {
@@ -90,24 +127,29 @@ SmartPlace é um app moderno e inteligente para conectar clientes a prestadores 
 
 ## 👤 Funcionalidades – Cliente
 
-- Login via celular (Firebase)
-- Tela inicial com IA
-- Recontratação com 1 clique
-- Perfil completo do prestador
-- Avaliação com estrela + tags
-- Agendamento com pacotes
-- Chat pós-pagamento
-- Histórico completo
-- Notificações push/SMS
-- Gamificação
+- 🔐 Login via celular com Firebase Auth (SMS + Recaptcha)
+- 🧠 Tela inicial com sugestões baseadas em IA
+- 🔁 Recontratação com 1 clique (histórico + favoritos)
+- 🧾 Visualização de perfil completo do prestador (bio, serviços, portfólio)
+- ⭐ Sistema de avaliação com estrelas, tags e comentários
+- 📦 Agendamento com escolha de pacotes (Standard, Premium)
+- 💬 Chat interno ativado após pagamento (Firestore + Push)
+- 🕒 Histórico completo de agendamentos com status
+- 📲 Notificações em tempo real (FCM e fallback via SMS/Twilio)
+- 🎮 Gamificação com pontos, selos e níveis
+- 🛒 Pagamento integrado (MercadoPago - em construção)
+- 🔄 Suporte à reembolsos e reagendamentos futuros
 
 ## 🧑‍🔧 Funcionalidades – Prestador (em construção)
 
-- Criar/editar perfil
-- Selecionar serviços
-- Definir cidades de atendimento
-- Ver avaliações
-- Reputação e selo automático
+- 🛠️ Criação e edição do perfil público
+- 📋 Cadastro e gerenciamento dos serviços oferecidos
+- 🗺️ Definição de área de cobertura por cidade/CEP
+- ⭐ Visualização de avaliações recebidas com tags
+- 🏅 Reputação automática com base em IA e reviews
+- 📊 Dashboard de performance (em desenvolvimento)
+- 🔔 Recebimento de notificações de novos agendamentos
+- 🎖️ Sistema de selo "Top Prestador" automático
 
 ## 🔄 Lógica entre Telas x Firebase
 
