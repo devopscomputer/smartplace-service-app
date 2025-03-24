@@ -1,82 +1,59 @@
-🚀 SmartPlace – Marketplace Inteligente de Serviços
+# 🚀 SmartPlace – Marketplace Inteligente de Serviços
 
-<<<<<<< HEAD
-=======
+![GitHub repo size](https://img.shields.io/github/repo-size/pumba-dev/pumba-dev-website?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/pumba-dev/pumba-dev-website?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/pumba-dev/pumba-dev-website?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/pumba-dev/pumba-dev-website?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/github/issues-pr/pumba-dev/pumba-dev-website?style=for-the-badge)
 
+<h2 align="center">☕ Projeto Em Desenvolvimento</h2>
 
+## 💻 Visão Geral
 
+SmartPlace é um app moderno e inteligente para conectar clientes a prestadores de serviços locais como:
 
+✔️ Limpeza, jardinagem, manutenção, beleza, reformas, etc.
 
+✔️ Agendamento com IA, confirmação, pagamento e recontratação.
 
->>>>>>> c700a1e (Subind o Readme.md)
-Plataforma moderna e inteligente para agendamento de serviços locais, com foco em prestadores autônomos e experiência de usuário inspirada em apps como Urban Company, Airbnb e Thumbtack.
+✔️ Interface inspirada em apps como Airbnb, Thumbtack e Urban Company.
 
-📱 Visão Geral
+## 🎯 Foco Estratégico
 
-SmartPlace é um app que conecta clientes a prestadores de serviços como:
+- 📲 Mobile-first com ótima UX
+- 🤖 IA leve para recomendações
+- 💸 Monetização escalável
+- 🌎 Pronto para LATAM
+- 🧩 Arquitetura modular desacoplada
 
-✔️ Limpeza, jardinagem, manutenção, beleza, cuidados pessoais, reformas, entre outros.
+## 🔧 Tecnologias Utilizadas
 
-✔️ Agendamentos inteligentes com sugestão de horários, confirmação, pagamento e recontratação.
+### Frontend (React Native com Expo)
+- React Navigation
+- Styled Components
+- Framer Motion
+- Maps, BlurView, SVG
+- Firebase Auth, Firestore, Push
 
-✔️ Interface moderna e intuitiva para clientes e prestadores autônomos.
+### Backend (Firebase Functions)
+- Firebase Authentication (SMS)
+- Cloud Firestore (NoSQL)
+- Cloud Functions v2
+- Firebase Emulator Suite
+- Integração futura com MercadoPago, Twilio
 
-🎯 Foco Estratégico:
+### DevOps
+- EAS CLI (build Android/iOS)
+- Firebase Hosting (dashboard futuro)
+- GitHub Actions (CI/CD futuro)
 
-📲 Experiência completa e mobile-first
+## 🔐 Autenticação Firebase
 
-🤖 Eficiência operacional com IA leve
+- Login por telefone
+- Código via SMS + Recaptcha
+- UID armazenado no Firestore com nome, cidade, etc.
 
-💸 Alto potencial de monetização
-
-🌎 Escalabilidade para LATAM
-
-🧩 Modularidade técnica (frontend e backend desacoplados)
-
-🔧 Tecnologias Utilizadas
-
-Frontend (Mobile App)
-
-React Native com Expo SDK
-
-React Navigation, Styled Components, Framer Motion
-
-React Native SVG, BlurView e Maps
-
-Firebase Auth, Push Notifications e Firestore
-
-Backend (Serverless)
-
-Firebase Authentication (via SMS)
-
-Firebase Cloud Firestore (NoSQL DB)
-
-Firebase Cloud Functions v2 (Node.js 18+)
-
-Firebase Emulator Suite (testes locais)
-
-Twilio (SMS Fallback), FCM (Push), MercadoPago (futuro)
-
-DevOps e Build
-
-EAS CLI (Expo Application Services)
-
-Firebase Hosting (futuro dashboard admin)
-
-GitHub Actions (CI/CD futura)
-
-🔐 Autenticação Inteligente com Firebase
-
-Cliente insere número de telefone
-
-Firebase envia código via SMS
-
-App verifica token (Recaptcha + Auth)
-
-Usuário criado no Firestore com UID, nome e cidade
-
-Estrutura Firestore (usuário):
-
+```json
 {
   "uid": "firebase_uid",
   "phone": "+55...",
@@ -88,319 +65,136 @@ Estrutura Firestore (usuário):
   "avgRating": 4.8,
   "tagStats": { "pontual": 12, "eficiente": 8 }
 }
-
-👤 Funcionalidades - Cliente
-
-Login via celular (Firebase Auth)
-
-Tela inicial com IA (serviços sugeridos)
-
-Recontratação com 1 clique
-
-Perfil de prestador completo (bio, portfólio, região)
-
-Sistema de avaliação (estrela + tags + comentários)
-
-Agendamento com escolha de pacotes (Standard/Premium)
-
-Chat interno liberado após pagamento
-
-Histórico de agendamentos
-
-Notificações push + SMS
-
-Gamificação com pontos e selos
-
-🧑‍🔧 Funcionalidades - Prestador (em construção)
-
-Criação e edição de perfil público
-
-Serviços oferecidos e pacotes customizáveis
-
-Áreas de atendimento por cidade/CEP
-
-Avaliações públicas e tags recebidas
-
-Painel de reputação
-
-Selo "Top Prestador" (automático por IA leve)
-
-🔄 Lógica entre Telas e Backend
-
-Tela
-
-Função Backend/Firebase
-
-HomeScreen
-
-Destaques IA + Firestore
-
-SecondScreen
-
-Listagem com filtros, mapa e favoritos
-
-ProfileScreen
-
-Dados do prestador + reviews
-
-CheckoutScreen
-
-Agendamento + seleção de data/pacote
-
-PaymentConfirm
-
-Atualiza status + ativa chat interno
-
-ChatScreen
-
-Chat interno via Firestore Subcollection
-
-AppointmentHistory
-
-Histórico completo de serviços contratados
-
-🔥 Backend Firebase Functions
-
-Triggers Automáticos
-
-Evento
-
-Ação Executada
-
-onAppointmentCreated
-
-Push para prestador com dados do agendamento
-
-onAppointmentStatusChanged
-
-Notifica cliente e prestador sobre a mudança de status
-
-onNewMessage
-
-Push para receptor no chat
-
-onNewReview
-
-Atualiza média de avaliação e tags do prestador
-
-Rotas HTTP (Cloud Functions)
-
-Endpoint
-
-Descrição
-
-/users/update
-
-Atualiza perfil do usuário
-
-/appointment/create
-
-Cria novo agendamento (validação automática)
-
-/gamification/points/:uid
-
-Consulta de pontos do cliente
-
-/recommend?clientId=
-
-Sugestões personalizadas com IA leve
-
-/adminStats
-
-Relatórios (total de usuários, agendamentos, etc)
-
-🤖 Inteligência e Automação
-
-🔍 Recomendação baseada em histórico (reuso de prestador)
-
-📲 Notificações por FCM + fallback SMS com Twilio
-
-🧠 IA leve para destacar melhores prestadores da região
-
-🎖️ Selos gerados automaticamente por reputação
-
-🧩 Sistema de pontos acumulativos com cashback e níveis
-
-🧪 Testes Locais (Firebase Emulator)
-
+```
+
+## 👤 Funcionalidades – Cliente
+
+- Login via celular (Firebase)
+- Tela inicial com IA
+- Recontratação com 1 clique
+- Perfil completo do prestador
+- Avaliação com estrela + tags
+- Agendamento com pacotes
+- Chat pós-pagamento
+- Histórico completo
+- Notificações push/SMS
+- Gamificação
+
+## 🧑‍🔧 Funcionalidades – Prestador (em construção)
+
+- Criar/editar perfil
+- Selecionar serviços
+- Definir cidades de atendimento
+- Ver avaliações
+- Reputação e selo automático
+
+## 🔄 Lógica entre Telas x Firebase
+
+| Tela                | Função Backend                      |
+|---------------------|--------------------------------------|
+| HomeScreen          | Destaques IA + Firestore             |
+| SecondScreen        | Listagem com filtros/mapa            |
+| ProfileScreen       | Dados do prestador                   |
+| CheckoutScreen      | Agendamento + pacote + data          |
+| PaymentConfirmation | Confirmação + status + chat          |
+| ChatScreen          | Chat interno                         |
+| AppointmentHistory  | Histórico completo                   |
+
+## 🔥 Firebase Functions
+
+### Triggers
+- `onAppointmentCreated`: notifica prestador
+- `onStatusChanged`: alerta cliente/prestador
+- `onNewMessage`: push no chat
+- `onNewReview`: recalcula nota
+
+### Rotas HTTP
+- `/users/update`
+- `/appointment/create`
+- `/gamification/points/:uid`
+- `/recommend?clientId=`
+- `/adminStats`
+
+## 🤖 Inteligência e IA
+
+- Sugestões com base no histórico
+- FCM + fallback por SMS
+- Destaques automáticos
+- Selos por reputação
+- Pontuação por ações
+
+## 🧪 Testes Locais
+```bash
 cd backend
 firebase emulators:start
+```
 
-Emulator UI: http://localhost:4000
+Endpoints:
+- Firestore: http://localhost:8080
+- UI: http://localhost:4000
+- HTTP: http://localhost:5001
 
-HTTP Functions: http://localhost:5001
+## 📁 Estrutura Modular
 
-Firestore: http://localhost:8080
-
-Teste com Postman:
-
-POST http://localhost:5001/YOUR_PROJECT_ID/us-central1/appointment/create
-
-📁 Estrutura Modular (Simplificada)
-
+```
 smartplace-service-app/
-── assets/
 ├── screens/
-│   ├── BottomMenu.js
 │   ├── CheckoutScreen.js
-│   ├── CheckPrem.js
-│   ├── CheckStand.js
-│   ├── CurvedOverlay.js
-│   ├── HomeScreen.js
-│   ├── LoadingScreen.js
 │   ├── PaymentConfirmation.js
 │   ├── ProfileScreen.js
 │   ├── SecondScreen.js
-│   ├── UserProfileScreen.js
-│
-│   ├── ChatScreen.js                 ⬅️ Chat interno com prestador
-│   ├── AppointmentHistory.js        ⬅️ Tela para histórico completo
-│
+│   ├── ChatScreen.js
+│   ├── AppointmentHistory.js
 │   ├── components/
-│   │   ├── GamificationSection.js
-│   │   ├── Logo.js
-│   │   ├── MapSection.js
-│   │   ├── RehireSection.js
-│   │   ├── StoriesSection.js
-│   │   ├── SuggestedSection.js
-│   │   ├── TestimonialsSection.js
-│
+│   │   ├── SuggestedSection.js, MapSection.js, etc.
 │   ├── components-profile/
-│   │   ├── Badges.js
-│   │   ├── CoverageMap.js
-│   │   ├── FloatingCTA.js
-│   │   ├── HeaderProfile.js
-│   │   ├── Highlights.js
-│   │   ├── PortfolioGallery.js
-│   │   ├── ProfileBio.js
-│   │   ├── ReviewList.js            ⬅️ Avaliações e comentários
-│   │   ├── ServiceFAQ.js
-│   │   ├── ServiceList.js
-│   │   ├── ServicePackageCard.js
-│
+│   │   ├── HeaderProfile.js, Highlights.js, PortfolioGallery.js...
 │   ├── components-second/
-│   │   ├── AIRecommender.js         ⬅️ Sugestões inteligentes
-│   │   ├── FavoriteList.js
-│   │   ├── NearbyQuickHire.js
-│   │   ├── PromoBanner.js
-│   │   ├── TopRatedSection.js
-│
-│   ├── components-shared/           ⬅️ NOVA PASTA (reutilizáveis e globais)
-│   │   ├── RatingStars.js           ⬅️ Exibe nota com estrelas
-│   │   ├── TagChips.js              ⬅️ Tags de avaliação
-│   │   ├── ChatBubble.js            ⬅️ Mensagens enviadas/recebidas
-│   │   ├── NotificationBadge.js     ⬅️ Sininho, alertas de push
-│   │   ├── LevelBadge.js            ⬅️ Selo de cliente/top prestador
-│   │   ├── PointsProgressBar.js     ⬅️ Barra de gamificação
-│   │   ├── ReuseButton.js           ⬅️ Botão de recontratar
-│   │   ├── StatusPill.js            ⬅️ Pendente, confirmado, concluído
-│
-│   ├── firebase/
-│   │   ├── config.js
-│   │   ├── chat.js                  ⬅️ Funções de envio/leitura de mensagens
-│   │   ├── notifications.js         ⬅️ Push e SMS
-│   │   ├── appointments.js          ⬅️ CRUD de agendamentos
-│   │   ├── reviews.js               ⬅️ CRUD de avaliações
-│   │   ├── points.js                ⬅️ Sistema de pontos
-│   │   ├── ai.js                    ⬅️ Recomendação leve com base no histórico
-│
-├── backend/
-│   ├── functions/
-│   │   ├── index.js                           ⬅️ Entry point das funções
-│   │
-│   │   ├── utils/
-│   │   │   ├── sendPush.js                    ⬅️ Firebase Cloud Messaging
-│   │   │   ├── sendSMS.js                     ⬅️ Integração com Twilio ou APIs SMS
-│   │   │   ├── calculatePoints.js             ⬅️ Pontuação por serviço concluído
-│   │   │   ├── updateRatings.js               ⬅️ Cálculo automático de média e tags
-│   │   │   └── validateAppointment.js         ⬅️ Validação e verificação de conflitos
-│   │
-│   │   ├── triggers/
-│   │   │   ├── onAppointmentCreated.js        ⬅️ Notifica prestador ao agendar
-│   │   │   ├── onAppointmentStatusChanged.js  ⬅️ Push/SMS ao cliente ou prestador
-│   │   │   ├── onNewMessage.js                ⬅️ Notificação no chat
-│   │   │   ├── onNewReview.js                 ⬅️ Recalcula avaliação do prestador
-│   │
-│   │   ├── routes/
-│   │   │   ├── recommend.js                   ⬅️ Recomendação inteligente com IA leve
-│   │   │   ├── adminStats.js                  ⬅️ Relatórios de uso e performance
-│   │   │   ├── gamification.js                ⬅️ Consulta de pontos e selos
-│   │   │   ├── appointment.js                 ⬅️ Agendamentos e reagendamento via API
-│   │   │   ├── users.js                       ⬅️ Atualização de perfil, cobertura etc.
-│
-│   ├── firestore.rules                        ⬅️ Regras de segurança do Firestore
-│   ├── firebase.json                          ⬅️ Config Firebase deploy
-│   ├── .env                                   ⬅️ Configurações sensíveis (.gitignore)
-│   ├── package.json
-│   └── README.md
+│   │   ├── AIRecommender.js, PromoBanner.js, etc.
+│   ├── components-shared/
+│   │   ├── RatingStars.js, ReuseButton.js, StatusPill.js...
+├── firebase/
+│   ├── config.js, appointments.js, reviews.js, ai.js...
+├── backend/functions/
+│   ├── routes/, triggers/, utils/, index.js
+```
 
-├── .gitignore
-├── App.js
-├── app.json
-├── babel.config.js
-├── Navigation.js
-├── package.json
-├── package-lock.json
-├── yarn.lock
-├── README.md
+## 📸 Screenshots do App
+*Em breve*
 
-📸 Capturas de Tela
-
- 
-
-📦 Build do App (Expo + EAS CLI)
-
-# Android
+## 📦 Build
+```bash
 npx eas build -p android --profile production
-
-# iOS
 npx eas build -p ios --profile production
+```
 
-Certifique-se de configurar eas.json corretamente e integrar ao Firebase.
+## 💰 Monetização
+- Conta gratuita para prestadores
+- Assinatura mensal (Pro)
+- Comissão por serviço agendado
+- Impulsionamento no feed
 
-💰 Monetização
+## 🧬 Diferenciais
 
-✅ Plano gratuito limitado para prestadores
+- UI fluida e gamificada
+- Chat, agendamento e pagamento integrados
+- Modular, escalável e pronto para expansão LATAM
 
-💼 Assinatura mensal (Pro: visibilidade + agenda ilimitada)
+## 🤝 Como Contribuir
 
-💳 Comissão por serviço (ex: 8~10%)
-
-🚀 Impulsionamento no feed (destaque + IA Boost)
-
-📈 Estratégia de Mercado
-
-📊 Alta demanda em LATAM por serviços locais sob demanda
-
-🔧 Prestadores autônomos precisam de agilidade e organização
-
-🤳 Cliente busca segurança, reputação e agilidade no app
-
-🧬 Diferenciais:
-
-Experiência fluida e gamificada
-
-Integração entre agendamento, pagamento e chat
-
-Escalável, modular e pronto para monetização em escala
-
-🤝 Como Contribuir
-
+```bash
 git clone https://github.com/devopscomputer/smartplace-service-app.git
 cd smartplace-service-app
 git checkout -b feature/nova-feature
 npm install
+```
 
-Abra um Pull Request e colabore com a evolução do SmartPlace 🙌
+Pull Requests são bem-vindos!
 
-📄 Licença
+## 📄 Licença
+Distribuído sob licença MIT. Veja LICENSE.
 
-Distribuído sob a licença MIT. Veja LICENSE para mais detalhes.
+## 📲 Teste com QR Code via Expo Go
+*(Inserir link do app gerado com EAS CLI aqui)*
 
-📲 QR Code do App (Expo Go)
-
-<<<<<<< HEAD
-SmartPlace é um projeto estratégico de alto impacto no mercado de serviços autônomos. Estamos abertos à colaborações, parceiros e oportunidades de expansão.
-=======
-SmartPlace é um projeto estratégico de alto impacto no mercado de serviços autônomos. Estamos abertos à colaborações, parceiros e oportunidades de expansão.
->>>>>>> c700a1e (Subind o Readme.md)
+[⬆ Voltar ao topo](#smartplace--marketplace-inteligente-de-serviços)    
