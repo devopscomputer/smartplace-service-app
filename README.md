@@ -1,5 +1,14 @@
 🚀 SmartPlace – Marketplace Inteligente de Serviços
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+>>>>>>> c700a1e (Subind o Readme.md)
 Plataforma moderna e inteligente para agendamento de serviços locais, com foco em prestadores autônomos e experiência de usuário inspirada em apps como Urban Company, Airbnb e Thumbtack.
 
 📱 Visão Geral
@@ -390,4 +399,8 @@ Distribuído sob a licença MIT. Veja LICENSE para mais detalhes.
 
 📲 QR Code do App (Expo Go)
 
+<<<<<<< HEAD
 SmartPlace é um projeto estratégico de alto impacto no mercado de serviços autônomos. Estamos abertos à colaborações, parceiros e oportunidades de expansão.
+=======
+SmartPlace é um projeto estratégico de alto impacto no mercado de serviços autônomos. Estamos abertos à colaborações, parceiros e oportunidades de expansão.
+>>>>>>> c700a1e (Subind o Readme.md)
