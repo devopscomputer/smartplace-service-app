@@ -1,4 +1,4 @@
-# 🚀 SmartPlace – Marketplace Inteligente de Serviços
+# 🧼 SmartPlace – Marketplace Inteligente de Serviços é um aplicativo React Native 
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/pumba-dev/pumba-dev-website?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/pumba-dev/pumba-dev-website?style=for-the-badge)
@@ -6,7 +6,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/pumba-dev/pumba-dev-website?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/github/issues-pr/pumba-dev/pumba-dev-website?style=for-the-badge)
 
-<h2 align="center">🧼 SmartPlace – Marketplace Inteligente de Serviços é um aplicativo React Native </h2>
+<h2 align="center">☕ Projeto Em Desenvolvimento</h2>
 
 ## 💻 Visão Geral
 
